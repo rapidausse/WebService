@@ -1,0 +1,26 @@
+<section id="shearByName">
+
+<input #nameSearch (keyup)="onEnterName(nameSearch.value)">
+<p>{{value}}</p>
+
+<p> ------------------------------------</p>
+<div *ngFor="let adress of addressGouvByName">
+  <p>{{adress.properties.city }} </p> <p>{{adress.properties.context }} </p>
+  <p> ------------------------------------</p>
+</div>
+</section>
+
+<section id="shearByLatLong">
+
+  Lat :<input #searchLat (keyup)="onEnterLat(searchLat.value)">
+  <p>{{valueLat}}</p>
+
+  Long : <input #searchLong (keyup)="onEnterLong(searchLong.value)">
+  <p>{{valueLong}}</p>
+
+  <p> ------------------------------------</p>
+  <div *ngFor="let adress of addressGouvByLatLong">
+    <p>{{adress.properties.city }} </p> <p>{{adress.properties.context }} </p>
+    <p> ------------------------------------</p>
+  </div>
+</section>
